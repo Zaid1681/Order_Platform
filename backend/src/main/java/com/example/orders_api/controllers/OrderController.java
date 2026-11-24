@@ -35,6 +35,7 @@ public class OrderController {
         order.setTotalAmount(request.totalAmount());
         order.setStatus(request.status());
 
+        
         Order savedOrder = orderRepository.save(order);
         return new ResponseEntity<>(savedOrder, HttpStatus.CREATED);
     }
